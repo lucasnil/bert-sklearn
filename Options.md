@@ -36,6 +36,7 @@ model = BertClassifier(bert_model='bert-base-uncased',
  * `'bert-base-chinese'`
  * `'bert-base-portuguese-cased'`
  * `'bert-large-portuguese-cased'`
+ * `'distilbert-portuguese-cased'`
  
  **SciBERT pretrained BERT models**  See [`SciBERT` github](https://github.com/allenai/scibert) and [paper](https://arxiv.org/pdf/1903.10676.pdf) for more info.
  * `'scibert-scivocab-uncased'`
