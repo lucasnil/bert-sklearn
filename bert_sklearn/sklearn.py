@@ -827,8 +827,8 @@ def load_model(filename, device=None):
     """
     if device:
         state = torch.load(filename, map_location=torch.device(device))
-        else:
-            state = torch.load(filename)
+    else:
+        state = torch.load(filename)
     class_name = state['class_name']
 
     classes = {
