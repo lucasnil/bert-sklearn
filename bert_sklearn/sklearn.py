@@ -812,7 +812,7 @@ class BertTokenClassifier(BaseBertEstimator, ClassifierMixin):
         return tags
 
 
-def load_model(filename):
+def load_model(filename, device=None):
     """
     Load BertClassifier, BertRegressor, or BertTokenClassifier from a disk file.
 
@@ -825,7 +825,10 @@ def load_model(filename):
         ----------
         model : BertClassifier, BertRegressor, or BertTokenClassifier model
     """
-    state = torch.load(filename)
+    if device:
+        state = torch.load(filename, map_location=torch.device(device))
+        else:
+            state = torch.load(filename)
     class_name = state['class_name']
 
     classes = {
