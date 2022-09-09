@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: bert-sklearn
+Version: 0.3.1
+Summary: A sklearn wrapper for Bert
+Home-page: https://github.com/charles9n/bert-sklearn
+Author: charles_nainan
+Author-email: charles.j.9n@gmail.com
+License: Apache
+Keywords: scikit sklearn BERT sklearn NLP deep learning google
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.5.0
+License-File: LICENSE

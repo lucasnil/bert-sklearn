@@ -258,7 +258,7 @@ def get_train_val_dl(X1, X2, y, config):
     if val_len > 0:
         train_ds, val_ds = random_split(dataset, [len(dataset) - val_len, val_len])
         val_dl = DataLoader(val_ds, batch_size=config.eval_batch_size,
-                            num_workers=4, shuffle=False)
+                            num_workers=5, shuffle=False)
     else:
         val_dl = None
         train_ds = dataset
@@ -269,6 +269,6 @@ def get_train_val_dl(X1, X2, y, config):
         train_sampler = DistributedSampler(train_ds)
 
     train_dl = DataLoader(train_ds, sampler=train_sampler,
-                          batch_size=config.train_batch_size, num_workers=4,
+                          batch_size=config.train_batch_size, num_workers=5,
                           drop_last=config.drop_last_batch, shuffle=False)
     return train_dl, val_dl

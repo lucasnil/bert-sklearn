@@ -1,0 +1,7 @@
+torch>=0.4.1
+scikit-learn
+numpy
+pandas
+boto3
+requests
+tqdm
